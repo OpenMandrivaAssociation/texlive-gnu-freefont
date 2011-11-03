@@ -1,3 +1,9 @@
+# revision 19836
+# category Package
+# catalog-ctan /fonts/gnu-freefont
+# catalog-date 2010-09-21 17:25:45 +0200
+# catalog-license gpl3
+# catalog-version undef
 Name:		texlive-gnu-freefont
 Version:	20100921
 Release:	1
@@ -83,6 +89,7 @@ proportional (one with uniform and one with modulated stroke).
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/FreeSerifBoldItalic.sfd
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/FreeSerifItalic.sfd
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/Malayalam.sfd
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,3 +100,5 @@ proportional (one with uniform and one with modulated stroke).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
