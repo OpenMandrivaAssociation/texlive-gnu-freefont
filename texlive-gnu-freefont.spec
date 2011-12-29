@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package provides a set of outline (i.e. OpenType) fonts
@@ -28,20 +25,12 @@ covering as much as possible of the Unicode character set. The
 set consists of three typefaces: one monospaced and two
 proportional (one with uniform and one with modulated stroke).
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -90,7 +79,6 @@ proportional (one with uniform and one with modulated stroke).
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/FreeSerifBoldItalic.sfd
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/FreeSerifItalic.sfd
 %doc %{_texmfdistdir}/source/fonts/gnu-freefont/Malayalam.sfd
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -101,5 +89,3 @@ proportional (one with uniform and one with modulated stroke).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
