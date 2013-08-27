@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-gnu-freefont
 Version:	20120505
-Release:	2
+Release:	3
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
@@ -18,6 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires:	fontforge
 
 %description
 The package provides a set of outline (i.e. OpenType) fonts
