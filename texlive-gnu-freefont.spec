@@ -1,12 +1,12 @@
-# revision 26232
+# revision 29349
 # category Package
 # catalog-ctan /fonts/gnu-freefont
-# catalog-date 2012-05-05 09:25:10 +0200
+# catalog-date 2012-07-05 15:28:28 +0200
 # catalog-license gpl3
 # catalog-version undef
 Name:		texlive-gnu-freefont
-Version:	20120505
-Release:	3
+Version:	20120705
+Release:	1
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
