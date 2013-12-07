@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-gnu-freefont
 Version:	20120705
-Release:	4
+Release:	5
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
