@@ -5,8 +5,8 @@
 # catalog-license gpl3
 # catalog-version undef
 Name:		texlive-gnu-freefont
-Version:	20120705
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
