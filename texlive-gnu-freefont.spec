@@ -1,3 +1,4 @@
+%global _python_bytecompile_build 0
 # revision 29349
 # category Package
 # catalog-ctan /fonts/gnu-freefont
@@ -6,7 +7,7 @@
 # catalog-version undef
 Name:		texlive-gnu-freefont
 Version:	20170414
-Release:	2
+Release:	3
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
