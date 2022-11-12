@@ -6,15 +6,15 @@
 # catalog-license gpl3
 # catalog-version undef
 Name:		texlive-gnu-freefont
-Version:	20170414
-Release:	4
+Version:	29349
+Release:	1
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
 License:	GPL3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +29,12 @@ set consists of three typefaces: one monospaced and two
 proportional (one with uniform and one with modulated stroke).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -133,7 +133,8 @@ proportional (one with uniform and one with modulated stroke).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
