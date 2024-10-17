@@ -10,7 +10,7 @@ Version:	68624
 Release:	1
 Summary:	A Unicode font, with rather wide coverage
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/gnu-freefont
+URL:		https://www.ctan.org/tex-archive/fonts/gnu-freefont
 License:	GPL3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gnu-freefont.doc.r%{version}.tar.xz
